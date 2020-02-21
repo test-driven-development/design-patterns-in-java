@@ -1,26 +1,10 @@
 package com.oozinoz.ui;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.function.Function;
 
 import javax.swing.*;
 import java.awt.*;
 
-/**
- This class displays pair of functions in a panel. The functions
- are x and y functions, parameterized by time. As the panel plots,
- time goes 0 to 1.
- */
 public class PlotPanel extends JPanel {
   private int points;
 
@@ -30,11 +14,6 @@ public class PlotPanel extends JPanel {
   private Function xFunction;
   private Function yFunction;
 
-  /**
-   Create a plot calculated from the provided x and y functions.
-   These functions must be functions of time; time goes 0 to 1
-   as the panel plots.
-   */
   public PlotPanel(int nPoint, Function xFunc, Function yFunc) {
     points = nPoint;
     xPoints = new int[points];

@@ -1,27 +1,11 @@
 package app.decorator.brightness;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.function.Function;
 import com.oozinoz.function.T;
 
 import javax.swing.*;
 import java.awt.*;
 
-/**
- Plots a curve given parametric functions x and y that are parameterized on
- time t, where t goes 0 to 1 during the life of the curve.
-
- @author Steven J. Metsker */
 public class FunPanel extends JPanel {
   protected Function fx = new T();
 
@@ -64,12 +48,6 @@ public class FunPanel extends JPanel {
     g.drawPolyline(xArray, yArray, nPoint);
   }
 
-  /**
-   Establish the functions to plot.
-
-   @param fx the x function
-   @param fy the y function
-   */
   public void setXY(Function fx, Function fy) {
     this.fx = fx;
     this.fy = fy;

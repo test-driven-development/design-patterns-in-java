@@ -1,25 +1,10 @@
 package app.iterator.concurrent;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-/**
- Show that a "synchronized" list does not ensure that iteration over the list
- with a "for" loop is thread safe.
- */
 public class ShowConcurrentFor implements Runnable {
   private List list;
 
@@ -48,9 +33,6 @@ public class ShowConcurrentFor implements Runnable {
     }
   }
 
-  /**
-   Insert an element in the list, in a separate thread.
-   */
   public void run() {
     list.add(0, "Fuser1101");
   }

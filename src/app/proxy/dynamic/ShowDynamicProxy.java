@@ -7,11 +7,6 @@ import com.oozinoz.utility.Dollars;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- Show an example of using a dynamic proxy to add behavior to an object. In
- this example, we add an element of impatience, complaining if any method
- takes too long to execute.
- */
 public class ShowDynamicProxy {
   public static void main(String[] args) {
     Set s = new HashSet();

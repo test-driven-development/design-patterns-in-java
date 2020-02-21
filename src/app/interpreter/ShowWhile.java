@@ -1,25 +1,11 @@
 package app.interpreter;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.machine.Bin;
 import com.oozinoz.machine.Machine;
 import com.oozinoz.machine.MachineComposite;
 import com.oozinoz.machine.OozinozFactory;
 import com.oozinoz.robotInterpreter2.*;
 
-/**
- Show the use of a "while" interpreter.
- */
 public class ShowWhile {
   public static void main(String[] args) {
     MachineComposite dublin = OozinozFactory.dublin();

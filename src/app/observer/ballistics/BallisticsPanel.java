@@ -1,25 +1,10 @@
 package app.observer.ballistics;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.ballistics.BallisticsFunction;
 
 import javax.swing.*;
 import java.awt.*;
 
-/**
- Plot a ballistics function.
-
- @author Steven J. Metsker */
 public class BallisticsPanel extends JPanel {
   protected BallisticsFunction func;
 
@@ -31,21 +16,10 @@ public class BallisticsPanel extends JPanel {
 
   protected int[] y = new int[nPoint];
 
-  /**
-   Create a panel that can display the provided function.
-
-   @param func the ballistics function to plot. Ballistics functions vary
-   with time and with the time of peak burn area.
-   */
   public BallisticsPanel(BallisticsFunction func) {
     this.func = func;
   }
 
-  /**
-   Set the time at which the peak burn area is reached.
-
-   @param tPeak the time at which the peak burn area is reached
-   */
   public void setTPeak(double tPeak) {
     this.tPeak = tPeak;
     repaint();

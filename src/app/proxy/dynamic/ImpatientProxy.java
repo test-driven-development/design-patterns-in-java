@@ -4,12 +4,6 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-/**
- This class is an example of a dynamic proxy. Instances of this class wrap a
- proxied object. This class simply forwards calls to the object it wraps.
- However, if any method takes a long time to execute, this class will print a
- warning message.
- */
 public class ImpatientProxy implements InvocationHandler {
 
   private Object obj;
@@ -18,23 +12,12 @@ public class ImpatientProxy implements InvocationHandler {
     this.obj = obj;
   }
 
-  /**
-   Construct a dynamic proxy around the given object.
-
-   @param obj the object to wrap
-
-   @return the proxy
-   */
   public static Object newInstance(Object obj) {
     ClassLoader loader = obj.getClass().getClassLoader();
     Class[] classes = obj.getClass().getInterfaces();
     return Proxy.newProxyInstance(loader, classes, new ImpatientProxy(obj));
   }
 
-  /**
-   The method that all dynamic proxies must implement. This dynamic proxy
-   complains when a method takes a long time to return.
-   */
   public Object invoke(Object proxy, Method m, Object[] args) throws Throwable {
     Object result;
     long t1 = System.currentTimeMillis();

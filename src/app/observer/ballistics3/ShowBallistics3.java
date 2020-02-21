@@ -1,16 +1,5 @@
 package app.observer.ballistics3;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.ballistics.Ballistics;
 import com.oozinoz.ui.SwingFacade;
 
@@ -19,12 +8,6 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
 
-/**
- Show the standard burn rate and thrust equations. This class is refactored
- from ShowBallistics2. The changes involve pushing the value of tPeak down
- into a business layer and using a BallisticsLabel that knows about tPeak.
-
- @author Steven J. Metsker */
 public class ShowBallistics3 {
   protected BallisticsPanel burnPanel;
   protected JSlider slider;
@@ -34,9 +17,6 @@ public class ShowBallistics3 {
   protected JLabel valueLabel;
   protected Tpeak tPeak = new Tpeak(0);
 
-  /**
-   Show the standard burn rate and thrust equations.
-   */
   public static void main(String[] args) {
     SwingFacade.launch(new ShowBallistics3().mainPanel(),
       "Effects of tPeak");
@@ -50,9 +30,6 @@ public class ShowBallistics3 {
     return burnPanel;
   }
 
-  /*
-   * A panel to contain the two plots.
-   */
   protected JPanel curvePanel() {
     JPanel p = new JPanel();
     p.setLayout(new GridLayout(1, 2));
@@ -61,9 +38,6 @@ public class ShowBallistics3 {
     return p;
   }
 
-  /*
-   * The main panel -- the one that actually gets displayed.
-   */
   protected JPanel mainPanel() {
     JPanel p = new JPanel();
     p.setLayout(new BorderLayout());
@@ -72,10 +46,6 @@ public class ShowBallistics3 {
     return p;
   }
 
-  /*
-   * Now the slider just tells the business domain tPeak object that the
-   * slider moved.
-   */
   protected JSlider slider() {
     if(slider == null) {
       slider = new JSlider();
@@ -95,10 +65,6 @@ public class ShowBallistics3 {
     return slider;
   }
 
-  /*
-   * The box that holds the slider plus a textual label and a changing label
-   * that shows the value of the slider.
-   */
   protected Box sliderBox() {
     Box b = Box.createHorizontalBox();
     JLabel label = new JLabel("tPeak");

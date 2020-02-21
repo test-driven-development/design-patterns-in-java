@@ -1,22 +1,7 @@
 package com.oozinoz.businessCore;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import java.util.ArrayList;
 
-/**
- This class supports various examples that rely on the idea of a central
- object that represents an Oozinoz factory.
- */
 public class Factory {
   private static Factory factory;
 
@@ -37,10 +22,6 @@ public class Factory {
     }
   }
 
-  /**
-   @return an example list of "up" machines, supporting
-   "ShowConcurrentWhile" and other examples).
-   */
   public static ArrayList upMachineNames() {
     ArrayList result = new ArrayList();
     result.add("Mixer:1201");

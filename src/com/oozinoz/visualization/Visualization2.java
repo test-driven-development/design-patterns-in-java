@@ -1,16 +1,5 @@
 package com.oozinoz.visualization;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.ui.SwingFacade;
 import com.oozinoz.ui.UI;
 
@@ -18,10 +7,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- This version of the visualization adds a menu that
- provides for saving and restoring mementos from a file.
- */
 public class Visualization2 extends Visualization {
   public Visualization2(UI ui) {
     super(ui);

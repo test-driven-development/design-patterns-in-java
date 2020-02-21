@@ -1,25 +1,10 @@
 package com.oozinoz.reservation;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.utility.Dollars;
 
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- Subclasses of this abstract class validate a reservation's
- attributes before constructing a Reservation object.
- */
 public abstract class ReservationBuilder {
   public static final int MINHEAD = 25;
 
@@ -35,14 +20,6 @@ public abstract class ReservationBuilder {
 
   protected boolean hasSite;
 
-  /**
-   Push a date into the future by rolling forward the year.
-
-   @param inDate a date to push forward
-
-   @return a date like the one provided but with a year
-   that makes the date in the future
-   */
   public static Date futurize(Date inDate) {
     Calendar now = Calendar.getInstance();
     Calendar then = Calendar.getInstance();
@@ -54,19 +31,8 @@ public abstract class ReservationBuilder {
     return then.getTime();
   }
 
-  /**
-   Construct a valid reservation from attributes that have
-   been presumably been set for this builder. Subclasses may
-   throw an exception if a valid reservation cannot
-   be formed.
-
-   @return a valid reservation
-   */
   public abstract Reservation build() throws BuilderException;
 
-  /**
-   The city for a reservation
-   */
   public String getCity() {
     return city;
   }
@@ -75,9 +41,6 @@ public abstract class ReservationBuilder {
     city = value;
   }
 
-  /**
-   The date for a reservation.
-   */
   public Date getDate() {
     return date;
   }
@@ -86,9 +49,6 @@ public abstract class ReservationBuilder {
     date = value;
   }
 
-  /**
-   The dollars/head that a customer will pay for a display.
-   */
   public Dollars getDollarsPerHead() {
     return dollarsPerHead;
   }
@@ -97,10 +57,6 @@ public abstract class ReservationBuilder {
     dollarsPerHead = value;
   }
 
-  /**
-   Indicates whether a customer has a site in mind for a
-   display.
-   */
   public boolean hasSite() {
     return hasSite;
   }
@@ -109,10 +65,6 @@ public abstract class ReservationBuilder {
     hasSite = value;
   }
 
-  /**
-   The number of people that a customer will guarantee for
-   a display.
-   */
   public int getHeadcount() {
     return headcount;
   }

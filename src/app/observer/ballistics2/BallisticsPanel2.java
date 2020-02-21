@@ -1,16 +1,5 @@
 package app.observer.ballistics2;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.ballistics.BallisticsFunction;
 
 import javax.swing.*;
@@ -18,11 +7,6 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
 
-/**
- Plot a ballistics function. This class is refactored from BallisticsPanel_1
- to register its interest in a slider's value.
-
- @author Steven J. Metsker */
 public class BallisticsPanel2 extends JPanel implements ChangeListener {
   protected BallisticsFunction func;
 
@@ -36,25 +20,12 @@ public class BallisticsPanel2 extends JPanel implements ChangeListener {
 
   protected JSlider slider;
 
-  /**
-   Create a panel that can display the provided function, evaluated against
-   the value of the provided slider.
-
-   @param func    the ballistics function to plot. Ballistics functions vary
-   with time and with the time of peak burn area.
-   @param JSlider a slider to observe
-   */
   public BallisticsPanel2(BallisticsFunction func, JSlider slider) {
     this.func = func;
     this.slider = slider;
     slider.addChangeListener(this);
   }
 
-  /**
-   Update the label when the slider moves.
-
-   @param e ChangeEvent object (ignored)
-   */
   public void stateChanged(ChangeEvent e) {
     double val = slider.getValue();
     double max = slider.getMaximum();

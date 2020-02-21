@@ -1,33 +1,12 @@
 package com.oozinoz.testing;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.process.ProcessComponent;
 import com.oozinoz.process.ProcessSequence;
 import com.oozinoz.process.ProcessStep;
 import com.oozinoz.process.ShellProcess;
 import junit.framework.TestCase;
 
-/**
- Test the ProcessComponent hierarchy, especially its ability
- to model cyclic processes.
- */
-
 public class ProcessTest extends TestCase {
-  /**
-   @return a tiny process flow that shows a composite that is
-   not a tree (but also not a cycle, by the way). In this flow
-   A contains C and B, B contains C.
-   */
   public static ProcessComponent abc() {
     ProcessSequence a = new ProcessSequence("a");
     ProcessSequence b = new ProcessSequence("b");
@@ -38,11 +17,6 @@ public class ProcessTest extends TestCase {
     return a;
   }
 
-  /**
-   @return a tiny process flow that shows a composite that is
-   not a tree. In this flow A contains B, B contains C,
-   and C contains A.
-   */
   public static ProcessComponent cycle() {
     ProcessSequence a = new ProcessSequence("a");
     ProcessSequence b = new ProcessSequence("b");

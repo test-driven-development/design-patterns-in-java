@@ -1,16 +1,5 @@
 package app.facade;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.function.Function;
 import com.oozinoz.function.T;
 import com.oozinoz.ui.PlotPanel;
@@ -20,9 +9,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ShowFlight2 {
-  /**
-   Show the flight path of a nonexploding aerial shell.
-   */
   public static void main(String[] args) {
     PlotPanel p = new PlotPanel(101, new T(), new ShowFlight2().new YFunction());
     p.setPreferredSize(new Dimension(300, 200));

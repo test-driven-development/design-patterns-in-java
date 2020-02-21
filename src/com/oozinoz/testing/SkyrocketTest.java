@@ -1,32 +1,13 @@
 package com.oozinoz.testing;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.firework.OozinozSkyrocket;
 import com.oozinoz.firework.PhysicalRocket;
 import junit.framework.TestCase;
-
-/**
- Test the Simulation package and the Fireworks classes that support it.
- */
 
 public class SkyrocketTest extends TestCase {
   private static double SPECIFIC_IMPULSE = 620; // Newtons/Kg
   private static double FUEL_DENSITY = 1800; // Kg/M**3
 
-  /**
-   Test that mass varies linearly from start mass to 0, over the
-   time it takes the fuel to burn.
-   */
   public void testPhysicalRocket() {
     double burnArea = .0030;
     double burnDepth = .06;
@@ -47,10 +28,6 @@ public class SkyrocketTest extends TestCase {
     assertEquals("thrust", SPECIFIC_IMPULSE * FUEL_DENSITY * burnArea * burnRate, r.getThrust(bt / 2), tol);
   }
 
-  /**
-   Test that mass varies linearly from start mass to 0, over the
-   time it takes the fuel to burn.
-   */
   public void testOozinozSkyocket() {
     double burnArea = .0030;
     double burnDepth = .06;

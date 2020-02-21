@@ -1,25 +1,6 @@
 package com.oozinoz.machine;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
-/**
- This class provides object models of a few of Oozinoz's factories, in terms
- of the factories' machines.
- */
-
 public class OozinozFactory {
-  /**
-   @return a model of the machines in our Dublin facility.
-   */
   public static MachineComposite dublin() {
     MachineRoot root = new MachineRoot(0, new Engineer(4096));
     root.setName(" Factory Dublin");
@@ -30,9 +11,6 @@ public class OozinozFactory {
     return root;
   }
 
-  /**
-   @return a sample manufacturing line
-   */
   public static MachineComposite line1(TubMediator m, MachineComposite parent) {
     MachineComposite c = new MachineComposite(1000, parent);
     c.setName("Line 1");
@@ -41,9 +19,6 @@ public class OozinozFactory {
     return c;
   }
 
-  /**
-   @return a second sample manufacturing line
-   */
   public static MachineComposite line2(TubMediator m, MachineComposite parent) {
     MachineComposite c = new MachineComposite(2000, parent);
     c.setName("Line 2");
@@ -53,9 +28,6 @@ public class OozinozFactory {
     return c;
   }
 
-  /**
-   @return a third sample manufacturing line
-   */
   public static MachineComposite line3(TubMediator m, MachineComposite parent) {
     MachineComposite c = new MachineComposite(3000, parent);
     c.setName("Line 3");
@@ -68,9 +40,6 @@ public class OozinozFactory {
     return c;
   }
 
-  /**
-   @return a plant (a factory) that is not a tree.
-   */
   public static MachineComposite plant() {
     MachineComposite plant = new MachineComposite(100);
     MachineComposite bay = new MachineComposite(101);

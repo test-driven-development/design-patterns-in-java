@@ -1,24 +1,9 @@
 package com.oozinoz.ui;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
-
-/**
- User interface utilities.
- */
 
 public class UI {
   public static final int STANDARD_PAD = 10;
@@ -29,23 +14,14 @@ public class UI {
     return new ImageIcon(imageName);
   }
 
-  /**
-   @return a standard font that subclasses can override
-   */
   public Font getFont() {
     return font;
   }
 
-  /**
-   @return a standard padding amount that subclasses can override
-   */
   public int getPad() {
     return STANDARD_PAD;
   }
 
-  /**
-   @return a standard button
-   */
   public JButton createButton() {
     JButton button = new JButton();
     button.setSize(128, 128);
@@ -55,9 +31,6 @@ public class UI {
     return button;
   }
 
-  /**
-   @return a standard OK! (or affirmation) button
-   */
   public JButton createButtonOk() {
     JButton button = createButton();
     button.setIcon(getIcon("images/rocket-large.gif"));
@@ -65,9 +38,6 @@ public class UI {
     return button;
   }
 
-  /**
-   @return a standard Cancel! (or negation) button
-   */
   public JButton createButtonCancel() {
     JButton button = createButton();
     button.setIcon(getIcon("images/rocket-large-down.gif"));
@@ -75,9 +45,6 @@ public class UI {
     return button;
   }
 
-  /**
-   @return a panel with a standard amount of padding around any controls
-   */
   public JPanel createPaddedPanel() {
     JPanel panel = new JPanel();
     panel.setBorder(
@@ -85,12 +52,6 @@ public class UI {
     return panel;
   }
 
-  /**
-   @param c the control
-
-   @return a panel with a standard amount of padding around any particular
-   control
-   */
   public JPanel createPaddedPanel(Component c) {
     JPanel panel = createPaddedPanel();
     panel.add(c);
@@ -104,9 +65,6 @@ public class UI {
     return result;
   }
 
-  /**
-   @return a titled border with the given title.
-   */
   public TitledBorder createTitledBorder(String title) {
     TitledBorder border = BorderFactory.createTitledBorder(
       BorderFactory.createBevelBorder(BevelBorder.RAISED),
@@ -118,9 +76,6 @@ public class UI {
     return border;
   }
 
-  /**
-   @return a new panel that wraps a titled border around a given panel.
-   */
   public JPanel createTitledPanel(String title, JPanel in) {
     JPanel out = new JPanel();
     out.add(in);

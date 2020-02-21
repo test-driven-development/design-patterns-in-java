@@ -1,16 +1,5 @@
 package app.mediator.moveATub;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.ui.SwingFacade;
 import com.oozinoz.ui.UI;
 
@@ -25,11 +14,6 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
 
-/**
- This class is partially refactored, with a method for each control. The
- next step will be to create a mediator class, factoring the action logic
- out of this class.
- */
 public class MoveATub extends JPanel implements ListSelectionListener, ActionListener {
   private static Hashtable tubMachine;
 

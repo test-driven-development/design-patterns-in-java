@@ -1,16 +1,5 @@
 package com.oozinoz.iterator;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.process.ProcessComponent;
 
 import java.util.Iterator;
@@ -55,13 +44,6 @@ public class CompositeIterator extends ComponentIterator {
     return nextDescendant();
   }
 
-  /*
-   * Usually just return the subiterator's next element. But if the
-   * subiterator doesn't exist or doesn't have a next element, create an
-   * iterator for the next child. (If there is no next child, just return
-   * null.) Create an iterator for this child and return this iterator's next
-   * element.
-   */
   protected Object nextDescendant() {
     while(true) {
       if(subiterator != null) {

@@ -1,29 +1,11 @@
 package app.observer.ballistics2;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.ballistics.Ballistics;
 import com.oozinoz.ui.SwingFacade;
 
 import javax.swing.*;
 import java.awt.*;
 
-/**
- Show the standard burn rate and thrust equations. This class is covered in
- the Observer chapter where the class is refactored. The
- refactoring relieves this class of the responsibility for telling
- interested components that the slider moved.
-
- @author Steven J. Metsker */
 public class ShowBallistics2 {
   protected BallisticsPanel2 burnPanel;
 
@@ -37,9 +19,6 @@ public class ShowBallistics2 {
 
   protected JLabel valueLabel;
 
-  /**
-   Show the standard burn rate and thrust equations.
-   */
   public static void main(String[] args) {
     SwingFacade.launch(new ShowBallistics2().mainPanel(),
       "Effects of tPeak");
@@ -54,9 +33,6 @@ public class ShowBallistics2 {
     return burnPanel;
   }
 
-  /*
-   * A panel to contain the two plots.
-   */
   protected JPanel curvePanel() {
     JPanel p = new JPanel();
     p.setLayout(new GridLayout(1, 2));
@@ -65,9 +41,6 @@ public class ShowBallistics2 {
     return p;
   }
 
-  /**
-   The main panel -- the one that actually gets displayed.
-   */
   protected JPanel mainPanel() {
     JPanel p = new JPanel();
     p.setLayout(new BorderLayout());
@@ -86,10 +59,6 @@ public class ShowBallistics2 {
     return slider;
   }
 
-  /*
-   * The box that holds the slider plus a textual label and a changing label
-   * that shows the value of the slider.
-   */
   protected Box sliderBox() {
     Box b = Box.createHorizontalBox();
     JLabel label = new JLabel("tPeak");

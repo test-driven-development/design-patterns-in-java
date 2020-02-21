@@ -1,26 +1,10 @@
 package app.decorator;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.filter.RandomCaseFilter;
 import com.oozinoz.filter.WrapFilter;
 
 import java.io.*;
 
-/**
- Show filters that wrap text at 15 characters, center the text, set the text
- to random casing, and direct the output to System.out
-
- @author Steven J. Metsker */
 public class ShowFilters2 {
   public static void main(String[] args) throws IOException {
 

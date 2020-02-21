@@ -1,16 +1,5 @@
 package app.observer.ballistics;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.ballistics.Ballistics;
 import com.oozinoz.ui.SwingFacade;
 import com.oozinoz.utility.Format;
@@ -20,12 +9,6 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
 
-/**
- Show the standard burn rate and thrust equations. This class is covered in
- the Observer chapter where the class is refactored into ShowBallistics_2. The
- refactoring will let components observe the slider themselves.
-
- @author Steven J. Metsker */
 public class ShowBallistics implements ChangeListener {
   protected BallisticsPanel burnPanel;
   protected JSlider slider;
@@ -34,17 +17,11 @@ public class ShowBallistics implements ChangeListener {
   protected BallisticsPanel thrustPanel;
   protected JLabel valueLabel;
 
-  /**
-   Show the standard burn rate and thrust equations.
-   */
   public static void main(String[] args) {
     SwingFacade.launch(new ShowBallistics().mainPanel(),
       "Effects of tPeak");
   }
 
-  /*
-   * A panel to contain the two plots.
-   */
   protected JPanel curvePanel() {
     JPanel p = new JPanel();
     p.setLayout(new GridLayout(1, 2));
@@ -53,9 +30,6 @@ public class ShowBallistics implements ChangeListener {
     return p;
   }
 
-  /*
-   * The main panel -- the one that actually gets displayed.
-   */
   protected JPanel mainPanel() {
     JPanel p = new JPanel();
     p.setLayout(new BorderLayout());
@@ -75,10 +49,6 @@ public class ShowBallistics implements ChangeListener {
     return slider;
   }
 
-  /*
-   * The box that holds the slider plus a textual label and a changing label
-   * that shows the value of the slider.
-   */
   protected Box sliderBox() {
     Box b = Box.createHorizontalBox();
     JLabel label = new JLabel("tPeak");
@@ -91,9 +61,6 @@ public class ShowBallistics implements ChangeListener {
     return b;
   }
 
-  /**
-   The slider moved!
-   */
   public void stateChanged(ChangeEvent e) {
     double val = slider.getValue();
     double tp = (val - sliderMin) / (sliderMax - sliderMin);

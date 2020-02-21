@@ -1,16 +1,5 @@
 package com.oozinoz.visualization;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.ui.UI;
 
 import javax.swing.*;
@@ -19,12 +8,6 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.util.List;
 
-/**
- This class provides a visualization of a factory that contains
- machines and through which material flows. At present the only
- functionality is the ability to create and drag machines. In the
- future we'll add operational modeling functions.
- */
 public class Visualization extends JPanel implements ChangeListener {
   protected UI ui;
 

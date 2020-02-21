@@ -1,16 +1,5 @@
 package com.oozinoz.visualization;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -20,9 +9,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-/**
- This class handles the UI events for the Visualization class
- */
 public class VisMediator {
   public static final Point DEFAULT_LOCATION = new Point(10, 10);
 

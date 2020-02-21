@@ -6,10 +6,6 @@ import com.oozinoz.ui.UI;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- This class is refactored, show a mediator class, factoring the action logic
- out of this class.
- */
 public class MoveATub2 extends JPanel {
   MoveATubMediator mediator;
   private NameBase data = new NameBase();

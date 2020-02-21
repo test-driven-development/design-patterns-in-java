@@ -1,38 +1,11 @@
 package app.adapter;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.firework.Rocket;
 import com.oozinoz.utility.Dollars;
 
 import javax.swing.*;
 import java.awt.*;
 
-/*
- * Copyright (c) 2001 Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
-/**
- Show a few rockets in a nice table. This code shows how easy it is to adapt
- domain data for display in a Swing table.
-
- @author Steven J. Metsker */
 public class ShowRocketTable {
   public static void main(String[] args) {
     setFonts();
@@ -43,12 +16,6 @@ public class ShowRocketTable {
     display(pane, " Rockets");
   }
 
-  /**
-   Display a Swing component. We'll refactor this later into a nice facade.
-
-   @param c     the component to display
-   @param title the window title
-   */
   public static void display(Component c, String title) {
     JFrame frame = new JFrame(title);
     frame.getContentPane().add(c);

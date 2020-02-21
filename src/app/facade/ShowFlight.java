@@ -1,31 +1,11 @@
 package app.facade;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 
-/**
- This class displays the flight path of a dud (a non-exploding aerial shell),
- but it needs refactoring. When you refactor it, you should see a facade
- emerge for displaying Swing components.
-
- @author Steven J. Metsker */
 public class ShowFlight extends JPanel {
-  /**
-   Show the flight path of a nonexploding aerial shell.
-   */
   public static void main(String[] args) {
     ShowFlight fp = new ShowFlight();
     fp.setPreferredSize(new Dimension(300, 200));
@@ -39,9 +19,6 @@ public class ShowFlight extends JPanel {
     frame.setVisible(true);
   }
 
-  /**
-   Create a titled border with the given title.
-   */
   public static TitledBorder createTitledBorder(String title) {
     TitledBorder tb = BorderFactory.createTitledBorder(BorderFactory
       .createBevelBorder(BevelBorder.RAISED), title, TitledBorder.LEFT, TitledBorder.TOP);
@@ -50,9 +27,6 @@ public class ShowFlight extends JPanel {
     return tb;
   }
 
-  /**
-   Create a new panel that wraps a titled border around a given panel.
-   */
   public static JPanel createTitledPanel(String title, JPanel in) {
     JPanel out = new JPanel();
     out.add(in);
@@ -60,9 +34,6 @@ public class ShowFlight extends JPanel {
     return out;
   }
 
-  /**
-   @return a standard font for GUI use
-   */
   public static Font getStandardFont() {
     return new Font("Dialog", Font.PLAIN, 18);
   }

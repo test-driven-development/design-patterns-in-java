@@ -1,25 +1,10 @@
 package app.facade;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import com.oozinoz.ui.SwingFacade;
 
 import javax.swing.*;
 import java.awt.*;
 
-/**
- This class shows how to draw a circle using parametric equations.
-
- @author Steven J. Metsker */
 public class ShowCircle extends JPanel {
   public static void main(String[] args) {
     ShowCircle sc = new ShowCircle();

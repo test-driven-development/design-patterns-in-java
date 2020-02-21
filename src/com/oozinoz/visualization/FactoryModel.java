@@ -1,16 +1,5 @@
 package com.oozinoz.visualization;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
@@ -18,12 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-/**
- A model of a factory; at the moment this model just contains
- machine locations. However, the factory also provides support
- for undo by storing off mementos each time the factory
- configuration changes.
- */
 public class FactoryModel {
   private Stack mementos;
 

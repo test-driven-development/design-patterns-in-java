@@ -1,26 +1,8 @@
 package com.oozinoz.process;
 
-/*
- * Copyright (c) 2001, 2005. Steven J. Metsker.
- *
- * Steve Metsker makes no representations or warranties about
- * the fitness of this software for any particular purpose,
- * including the implied warranty of merchantability.
- *
- * Please use this software as you wish with the sole
- * restriction that you may not claim that you wrote it.
- */
-
-/**
- This class provides an object model of Oozinoz's process for making an aerial
- shell.
- */
 public class ShellProcess {
   protected static ProcessSequence make;
 
-  /**
-   @return an object model of Oozinoz's process for making an aerial shell.
-   */
   public static ProcessSequence make() {
     if(make == null) {
       make = new ProcessSequence("Make an aerial shell");
