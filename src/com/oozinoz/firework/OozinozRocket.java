@@ -3,7 +3,7 @@ package com.oozinoz.firework;
 import com.oozinoz.simulation.RocketSim;
 
 public class OozinozRocket extends PhysicalRocket implements RocketSim {
-  private double time;
+  private double time = 0;
 
   public OozinozRocket(
     double burnArea,
@@ -14,11 +14,11 @@ public class OozinozRocket extends PhysicalRocket implements RocketSim {
   }
 
   public double getMass() {
-    return getMass(time);
+    return getMass(this.time);
   }
 
   public double getThrust() {
-    return getThrust(time);
+    return getThrust(this.time);
   }
 
   public void setSimTime(double time) {
